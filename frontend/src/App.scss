@@ -1,0 +1,21 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__contenido {
+    flex-grow: 1;
+    padding: 32px $espaciado-3xl $espaciado-3xl;
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-2xl;
+
+    @include mobile {
+      padding: $espaciado-lg;
+      gap: $espaciado-lg;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modal Importar ventas sobre la pantalla</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;500;600&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Instrument Sans',system-ui,'Segoe UI',sans-serif;background:#F6F4EF;color:#1A1C19;-webkit-font-smoothing:antialiased}
+a{color:#14624B}a:hover{color:#0E4636}
+button,input,select{font-family:inherit}
+table{border-collapse:collapse;width:100%}
+</style>
+</head>
+<body>
+<div style="width: 1440px; height: 860px; box-sizing: border-box; position: relative; overflow: hidden; background: #F6F4EF;">
+
+  <div style="position: absolute; top: 0; left: 0; width: 1440px; display: flex; flex-direction: column;">
+    <header style="height: 64px; flex-shrink: 0; background: #FFFFFF; border-bottom: 1px solid #E2DFD6; display: flex; align-items: center; justify-content: space-between; padding: 0 40px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14624B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-3-2z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
+        <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em;">Ventas</span>
+        <span style="width: 1px; height: 20px; background: #E2DFD6;"></span>
+        <span style="font-size: 14px; color: #6A6D64;">[NOMBRE DE TU EMPRESA]</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 13px; color: #6A6D64;">Período: 15 — 21 sep 2026</span>
+        <span style="width: 1px; height: 24px; background: #E2DFD6;"></span>
+        <span style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 14.5px; font-weight: 500;">Importar ventas</span>
+        <span style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #14624B; border-radius: 6px; background: #14624B; color: #FFFFFF; font-size: 14.5px; font-weight: 600;">Nueva venta</span>
+      </div>
+    </header>
+    <div style="padding: 32px 40px; display: flex; flex-direction: column; gap: 24px;">
+      <section style="background: #FFFFFF; border: 1px solid #E2DFD6; border-radius: 10px; display: flex; flex-direction: column;">
+        <div style="padding: 26px 32px 24px; border-bottom: 1px solid #E2DFD6; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6A6D64;">Total del período</span>
+            <span style="font-family: 'Newsreader', Georgia, serif; font-size: 60px; line-height: 1; font-weight: 600; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">$ 2.486.990,75</span>
+          </div>
+          <span style="font-size: 14px; color: #55584F;">1.482 ventas en 7 días</span>
+        </div>
+        <div style="padding: 20px 32px 26px; display: flex; flex-direction: column; gap: 10px;">
+          <h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; font-weight: 600;">Desglose por día</h2>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px;">
+            <table>
+              <tbody>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">lunes 21/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 355.940,00</td>
+                </tr>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">domingo 20/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 96.500,00</td>
+                </tr>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">sábado 19/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 604.180,25</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <tbody>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">jueves 17/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 531.900,00</td>
+                </tr>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">miércoles 16/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 298.750,50</td>
+                </tr>
+                <tr>
+                  <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">martes 15/09</td>
+                  <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 412.300,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section style="background: #FFFFFF; border: 1px solid #E2DFD6; border-radius: 10px; padding: 22px 28px;">
+        <h2 style="margin: 0 0 10px; font-family: 'Newsreader', Georgia, serif; font-size: 20px; font-weight: 600;">Detalle de ventas</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10241</td>
+              <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">21/09/2026</td>
+              <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Ferretería San Martín</td>
+              <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 84.600,00</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10240</td>
+              <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">21/09/2026</td>
+              <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Distribuidora Lomas</td>
+              <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 128.400,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <div style="position: absolute; top: 0; left: 0; width: 1440px; height: 860px; background: rgba(23, 26, 23, 0.46); display: flex; align-items: center; justify-content: center; padding: 40px;">
+
+    <div role="dialog" aria-modal="true" aria-labelledby="im-titulo" style="width: 660px; background: #FFFFFF; border-radius: 12px; box-shadow: 0 24px 64px rgba(16, 20, 16, 0.32); display: flex; flex-direction: column; overflow: hidden;">
+      <div style="padding: 20px 24px 18px; border-bottom: 1px solid #E2DFD6; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <h2 id="im-titulo" style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 21px; font-weight: 600;">Importar ventas</h2>
+          <p style="margin: 0; max-width: 480px; font-size: 13px; color: #6A6D64; line-height: 1.5;">El archivo se lee en el navegador y se envía al backend en lotes de hasta 200 filas.</p>
+        </div>
+        <button type="button" aria-label="Cerrar" style="width: 44px; height: 44px; flex-shrink: 0; margin: -6px -6px 0 0; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 6px; background: transparent; cursor: pointer;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#55584F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+      </div>
+
+      <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="border: 1px dashed #CFCBBF; border-radius: 8px; background: #FBFAF6; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14624B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+          <span style="font-size: 15px; color: #3B3E38;">Arrastrá el archivo acá</span>
+          <label for="im-csv" style="height: 44px; padding: 0 20px; display: inline-flex; align-items: center; border: 1px solid #14624B; border-radius: 6px; background: #FFFFFF; color: #14624B; font-size: 15px; font-weight: 600; cursor: pointer;">Elegir archivo CSV</label>
+          <input id="im-csv" type="file" accept=".csv" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;">
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6D64;">Columnas esperadas</span>
+          <code style="display: block; padding: 12px 14px; border: 1px solid #E2DFD6; border-radius: 6px; background: #F6F4EF; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 12.5px; color: #3B3E38; line-height: 1.6;">id, fecha, cliente, cantidad, importe, medioPago, producto</code>
+        </div>
+
+        <div style="border: 1px solid #E2DFD6; border-radius: 8px; padding: 14px 16px; display: flex; align-items: center; gap: 14px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#55584F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><path d="M13 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"></path><path d="M13 3v5h5"></path></svg>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-size: 14.5px; font-weight: 500;">ventas-agosto.csv</span>
+            <span style="font-size: 12.5px; color: #6A6D64;">1.247 filas leídas · se enviarán en 7 lotes</span>
+          </div>
+          <button type="button" aria-label="Quitar el archivo" style="width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; cursor: pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#55584F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div style="padding: 16px 24px; border-top: 1px solid #E2DFD6; background: #FBFAF6; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <span style="max-width: 300px; font-size: 12.5px; color: #6A6D64; line-height: 1.5;">Cada lote viaja con su propia clave de idempotencia.</span>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 15px; font-weight: 500; cursor: pointer;">Cancelar</button>
+          <button type="button" style="height: 44px; padding: 0 22px; border: 1px solid #14624B; border-radius: 6px; background: #14624B; color: #FFFFFF; font-size: 15px; font-weight: 600; cursor: pointer;">Importar 1.247 filas</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

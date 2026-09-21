@@ -1,0 +1,171 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.detalle {
+  @include card;
+  padding: 22px 28px 20px;
+
+  @include mobile {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-md;
+  }
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: $espaciado-lg;
+    margin-bottom: $espaciado-xs;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__titulo {
+    margin: 0;
+    font-family: $fuente-display;
+    font-size: 20px;
+    font-weight: 600;
+
+    &:focus-visible {
+      outline: 2px solid $color-acento;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__endpoint {
+    font-size: 13px;
+    color: $color-texto-terciario;
+
+    @include mobile {
+      font-size: 12.5px;
+    }
+  }
+
+  &__estado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $espaciado-lg;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__vacio {
+    border: 1px solid $color-borde-fila;
+    border-radius: $radio-bloque;
+    background: $color-superficie-sutil;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $espaciado-xs;
+    text-align: center;
+
+    @include mobile {
+      padding: $espaciado-2xl $espaciado-lg;
+    }
+  }
+
+  &__vacio-icono {
+    color: $color-icono-apagado;
+  }
+
+  &__vacio-titulo {
+    font-size: 15px;
+    font-weight: 500;
+    color: $color-texto-label;
+  }
+
+  &__vacio-texto {
+    font-size: 14px;
+    color: $color-texto-terciario;
+  }
+
+  &__vacio-acciones {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: $espaciado-md;
+
+    @include mobile {
+      flex-direction: column;
+      align-self: stretch;
+
+      .boton {
+        width: 100%;
+      }
+    }
+  }
+
+  &__pie {
+    padding-top: $espaciado-lg;
+    margin-top: 4px;
+    border-top: 1px solid $color-borde-card;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $espaciado-lg;
+  }
+
+  &__rango {
+    font-size: 13px;
+    color: $color-texto-terciario;
+  }
+
+  &__cargar-mas {
+    width: 100%;
+  }
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  gap: $espaciado-xs;
+
+  &__pagina {
+    min-width: $alto-control;
+    height: $alto-control;
+    padding: 0 $espaciado-md;
+    border: 1px solid $color-borde-input;
+    border-radius: $radio-control;
+    background: $color-superficie;
+    color: $color-texto-label;
+    font-size: 14.5px;
+    cursor: pointer;
+    @include numerico;
+    @include foco;
+
+    &:hover {
+      background: $color-fondo;
+    }
+
+    &--actual {
+      border-color: $color-acento;
+      background: $color-acento;
+      color: $color-superficie;
+      font-weight: 600;
+
+      &:hover {
+        background: $color-acento;
+      }
+    }
+  }
+
+  &__elipsis {
+    padding: 0 4px;
+    font-size: 14.5px;
+    color: $color-texto-apagado;
+  }
+}

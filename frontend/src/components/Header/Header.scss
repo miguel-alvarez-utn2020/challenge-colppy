@@ -1,0 +1,96 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: $alto-header;
+  flex-shrink: 0;
+  background: $color-superficie;
+  border-bottom: 1px solid $color-borde-card;
+  box-shadow: $sombra-header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $espaciado-3xl;
+
+  @include mobile {
+    height: $alto-header-mobile;
+    padding: 0 $espaciado-lg;
+    box-shadow: none;
+  }
+
+  &__marca {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-md;
+  }
+
+  &__icono {
+    color: $color-acento;
+    flex-shrink: 0;
+  }
+
+  &__wordmark {
+    font-family: $fuente-display;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+    @include mobile {
+      font-size: 19px;
+    }
+  }
+
+  &__acciones {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-lg;
+  }
+
+  &__periodo {
+    font-size: 13px;
+    color: $color-texto-terciario;
+    white-space: nowrap;
+
+    @include mobile {
+      font-size: 12.5px;
+    }
+  }
+
+  &__divisor {
+    width: 1px;
+    height: 24px;
+    background: $color-borde-card;
+  }
+
+  @include mobile {
+    &__divisor,
+    &__acciones .boton {
+      display: none;
+    }
+  }
+}
+
+.acciones-mobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-sm;
+    position: sticky;
+    top: $alto-header-mobile;
+    z-index: 40;
+    padding: 0 $espaciado-lg $espaciado-md;
+    margin: 0 (-$espaciado-lg) (-$espaciado-md);
+    background: $color-fondo;
+    box-shadow: $sombra-header;
+
+    .boton {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}

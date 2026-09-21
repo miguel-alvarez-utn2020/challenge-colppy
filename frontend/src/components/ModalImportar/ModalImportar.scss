@@ -1,0 +1,328 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.importar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  &__overline {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-texto-terciario;
+  }
+
+  &__columnas {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-xs;
+  }
+
+  &__codigo {
+    display: block;
+    padding: $espaciado-md 14px;
+    border: 1px solid $color-borde-card;
+    border-radius: $radio-control;
+    background: $color-fondo;
+    font-family: $fuente-mono;
+    font-size: 12.5px;
+    color: $color-texto-label;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  &__nota {
+    margin: 0;
+    font-size: 13.5px;
+    color: $color-texto-secundario;
+    line-height: 1.55;
+  }
+}
+
+.zona-drop {
+  border: 1px dashed $color-borde-input;
+  border-radius: $radio-bloque;
+  background: $color-superficie-sutil;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $espaciado-md;
+  text-align: center;
+
+  &--activa {
+    border-color: $color-acento;
+    background: $color-exito-tile;
+  }
+
+  &__icono {
+    color: $color-acento;
+  }
+
+  &__leyenda {
+    font-size: 15px;
+    color: $color-texto-label;
+  }
+
+  label {
+    @include foco;
+  }
+}
+
+.archivo {
+  border: 1px solid $color-borde-card;
+  border-radius: $radio-bloque;
+  padding: 14px $espaciado-lg;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  &__icono {
+    flex-shrink: 0;
+    color: $color-texto-secundario;
+  }
+
+  &__datos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__nombre {
+    font-size: 14.5px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+
+  &__detalle {
+    font-size: 12.5px;
+    color: $color-texto-terciario;
+  }
+}
+
+.progreso {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-sm;
+
+  &__cabecera {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: $espaciado-md;
+  }
+
+  &__lote {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &__filas {
+    font-size: 13.5px;
+    color: $color-texto-secundario;
+    @include numerico;
+  }
+
+  &__riel {
+    height: 10px;
+    border-radius: $radio-pill;
+    background: $color-riel-progreso;
+    overflow: hidden;
+  }
+
+  &__relleno {
+    height: 10px;
+    border-radius: $radio-pill;
+    background: $color-acento;
+    transition: width 0.2s ease-out;
+  }
+}
+
+.contadores {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $espaciado-md;
+
+  @include mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .contador:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.contador {
+  border: 1px solid $color-borde-card;
+  border-radius: $radio-bloque;
+  background: $color-superficie-sutil;
+  padding: 14px $espaciado-lg;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  &__etiqueta {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $color-texto-terciario;
+  }
+
+  &__cifra {
+    font-family: $fuente-display;
+    font-size: 26px;
+    font-weight: 600;
+    @include numerico;
+  }
+
+  &--insertadas .contador__cifra {
+    color: $color-exito-texto;
+  }
+
+  &--duplicadas .contador__cifra {
+    color: $color-info-texto;
+  }
+
+  &--invalidas .contador__cifra {
+    color: $color-error-texto;
+  }
+
+  &--resultado {
+    .contador__etiqueta {
+      color: $color-texto-label;
+    }
+
+    .contador__cifra {
+      font-size: 30px;
+    }
+
+    &.contador--insertadas {
+      border-color: $color-exito-borde;
+      background: $color-exito-tile;
+    }
+
+    &.contador--duplicadas {
+      border-color: $color-info-borde;
+      background: $color-info-tile;
+    }
+
+    &.contador--invalidas {
+      border-color: $color-error-borde;
+      background: $color-error-tile;
+    }
+  }
+}
+
+.detalle-bloque {
+  border: 1px solid $color-borde-card;
+  border-radius: $radio-bloque;
+  background: $color-superficie-sutil;
+
+  &__summary {
+    min-height: 48px;
+    padding: 13px $espaciado-lg;
+    display: flex;
+    align-items: center;
+    gap: $espaciado-sm;
+    font-size: 14.5px;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    @include foco;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    color: $color-texto-secundario;
+    transition: transform 0.15s ease-out;
+  }
+
+  &[open] &__summary &__chevron {
+    transform: rotate(90deg);
+  }
+
+  &__cuerpo {
+    padding: 2px $espaciado-lg $espaciado-lg;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__acciones {
+    padding-top: $espaciado-sm;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  &--error {
+    border-color: $color-error-borde;
+    background: $color-error-tile;
+
+    .detalle-bloque__summary {
+      color: $color-error-titulo;
+    }
+
+    .detalle-bloque__chevron {
+      color: $color-error-texto;
+    }
+  }
+}
+
+.fila-invalida {
+  display: flex;
+  align-items: baseline;
+  gap: $espaciado-md;
+  padding: 9px 0;
+  border-top: 1px solid $color-error-borde-fila;
+
+  &__origen {
+    width: 128px;
+    flex-shrink: 0;
+    @include mono(12.5px);
+    color: $color-error-titulo;
+  }
+
+  &__motivo {
+    font-size: 13.5px;
+    color: $color-texto-label;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 2px;
+
+    &__origen {
+      width: auto;
+    }
+  }
+}
+
+.lista-ids {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $espaciado-xs;
+  max-height: 180px;
+  overflow-y: auto;
+
+  li {
+    @include mono(12.5px);
+    padding: 3px $espaciado-xs;
+    border-radius: $radio-control;
+    background: $color-info-pill;
+    color: $color-info-texto;
+  }
+}

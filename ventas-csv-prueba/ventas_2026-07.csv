@@ -1,0 +1,15 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+V-1028,2026-07-02,Distribuidora Sur,Fideos x24,10,19000.00,efectivo
+V-1029,2026-07-04,Bar La Esquina,Cafe en grano,10,20000.00,tarjeta
+V-1030,2026-07-06,Ferreteria Nuñez,Tornillos x100,30,4800.00,efectivo
+V-1031,2026-07-08,Kiosco El Sol,Golosinas surtidas,25,3750.00,efectivo
+V-1032,2026-07-10,Estudio Contable RyR,Servicio mensual,1,45000.00,transferencia
+V-1033,2026-07-12,Panaderia Ortiz,Harina x25kg,5,15500.00,transferencia
+V-1034,2026-07-14,Optica Vision,Armazon,2,31000.00,tarjeta
+V-1035,2026-07-16,Comercial Andrade,Servicio de consultoria,1,18500.00,transferencia
+V-1036,2026-07-18,Juan Perez,Cuaderno,20,9000.00,efectivo
+V-1037,2026-07-20,Distribuidora Sur,Aceite x12,8,45600.00,transferencia
+V-1038,2026-07-22,Bar La Esquina,Cafe en grano,6,9600.00,tarjeta
+V-1039,2026-07-24,Kiosco El Sol,Bebidas x24,15,36000.00,efectivo
+V-1040,2026-07-26,Comercial Andrade,Toner HP,2,16200.00,transferencia
+V-1041,2026-07-28,Optica Vision,Lentes de contacto,3,39000.00,tarjeta

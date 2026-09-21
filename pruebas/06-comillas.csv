@@ -1,0 +1,3 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+TEST-C-0001,2026-09-21,"Distribuidora Lomas, S.A.","Cable 2x1,5 mm por 100 m",4,128400.00,tarjeta
+TEST-C-0002,2026-09-21,,"Monitor 24"" curvo",1,654801.25,transferencia

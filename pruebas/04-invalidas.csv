@@ -1,0 +1,9 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+TEST-INV-1,2026-09-21,Cliente,Producto,-3,1000,transferencia
+TEST-INV-2,2026-09-21,Cliente,Producto,2,10.005,tarjeta
+TEST-INV-3,2026-09-21,Cliente,Producto,2,1000,mercadopago
+,2026-09-21,Cliente,Producto,2,1000,efectivo
+TEST-INV-5,ayer,Cliente,Producto,2,1000,efectivo
+TEST-INV-6,2026-09-21,Cliente,,2,1000,efectivo
+TEST-INV-7,2026-09-21,Cliente,Producto,1.5,1000,efectivo
+TEST-INV-8,2026-09-21,Cliente,Producto,2,-40,efectivo

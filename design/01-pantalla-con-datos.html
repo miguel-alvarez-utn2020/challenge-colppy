@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pantalla de ventas — estado cargado</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;500;600&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Instrument Sans',system-ui,'Segoe UI',sans-serif;background:#F6F4EF;color:#1A1C19;-webkit-font-smoothing:antialiased}
+a{color:#14624B}a:hover{color:#0E4636}
+button,input,select{font-family:inherit}
+table{border-collapse:collapse;width:100%}
+</style>
+</head>
+<body>
+<div style="width: 1440px; height: 1180px; box-sizing: border-box; background: #F6F4EF; display: flex; flex-direction: column;">
+
+  <header style="height: 64px; flex-shrink: 0; background: #FFFFFF; border-bottom: 1px solid #E2DFD6; display: flex; align-items: center; justify-content: space-between; padding: 0 40px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14624B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-3-2z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em;">Ventas</span>
+      <span style="width: 1px; height: 20px; background: #E2DFD6;"></span>
+      <span style="font-size: 14px; color: #6A6D64;">[NOMBRE DE TU EMPRESA]</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span style="font-size: 13px; color: #6A6D64;">Período: 15 — 21 sep 2026</span>
+      <span style="width: 1px; height: 24px; background: #E2DFD6;"></span>
+      <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 14.5px; font-weight: 500; cursor: pointer;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B3E38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+        Importar ventas
+      </button>
+      <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #14624B; border-radius: 6px; background: #14624B; color: #FFFFFF; font-size: 14.5px; font-weight: 600; cursor: pointer;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        Nueva venta
+      </button>
+    </div>
+  </header>
+
+  <div style="flex-grow: 1; padding: 32px 40px 40px; display: flex; flex-direction: column; gap: 24px;">
+
+    <section style="background: #FFFFFF; border: 1px solid #E2DFD6; border-radius: 10px; display: flex; flex-direction: column;">
+      <div style="padding: 26px 32px 24px; border-bottom: 1px solid #E2DFD6; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6A6D64;">Total del período</span>
+          <span style="font-family: 'Newsreader', Georgia, serif; font-size: 60px; line-height: 1; font-weight: 600; letter-spacing: -0.015em; font-variant-numeric: tabular-nums;">$ 2.486.990,75</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
+            <span style="font-size: 14px; color: #55584F;">1.482 ventas en 7 días</span>
+            <span style="font-size: 13px; color: #6A6D64;">Se actualiza solo después de cada carga</span>
+          </div>
+          <button type="button" aria-label="Actualizar consolidado" style="width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; cursor: pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3B3E38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7"></path><path d="M20 4v4h-4"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div style="padding: 20px 32px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between;">
+          <h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; font-weight: 600;">Desglose por día</h2>
+          <span style="font-size: 13px; color: #6A6D64;">GET /ventas/consolidado</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px;">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: left; padding: 8px 0; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Fecha</th>
+                <th scope="col" style="text-align: right; padding: 8px 0; width: 180px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Total</th>
+                <th scope="col" style="text-align: right; padding: 8px 0; width: 110px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">% del total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">lunes 21/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 355.940,00</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">14,3 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">domingo 20/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 96.500,00</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">3,9 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">sábado 19/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 604.180,25</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">24,3 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px;">viernes 18/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums;">$ 187.420,00</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums;">7,5 %</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: left; padding: 8px 0; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Fecha</th>
+                <th scope="col" style="text-align: right; padding: 8px 0; width: 180px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Total</th>
+                <th scope="col" style="text-align: right; padding: 8px 0; width: 110px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">% del total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">jueves 17/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 531.900,00</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">21,4 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">miércoles 16/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 298.750,50</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">12,0 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; border-bottom: 1px solid #EFEDE6;">martes 15/09</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 412.300,00</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">16,6 %</td>
+              </tr>
+              <tr>
+                <td style="padding: 11px 0; font-size: 15px; color: #8A8D83;">Total del período</td>
+                <td style="padding: 11px 0; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums;">$ 2.486.990,75</td>
+                <td style="padding: 11px 0; text-align: right; font-size: 14px; color: #55584F; font-variant-numeric: tabular-nums;">100 %</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #E2DFD6; border-radius: 10px; padding: 22px 28px 20px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px;">
+        <h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 20px; font-weight: 600;">Detalle de ventas</h2>
+        <span style="font-size: 13px; color: #6A6D64;">GET /ventas · 20 por página</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: left; padding: 10px 12px 10px 0; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">ID</th>
+            <th scope="col" style="text-align: left; padding: 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Fecha</th>
+            <th scope="col" style="text-align: left; padding: 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Cliente</th>
+            <th scope="col" style="text-align: left; padding: 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Producto</th>
+            <th scope="col" style="text-align: right; padding: 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Cant.</th>
+            <th scope="col" style="text-align: left; padding: 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Medio de pago</th>
+            <th scope="col" style="text-align: right; padding: 10px 0 10px 12px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6A6D64; border-bottom: 1px solid #E2DFD6;">Importe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10241</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">21/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Ferretería San Martín</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Tornillo hexagonal 1/2 x 100</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">12</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E8F1ED; color: #14624B; font-size: 12.5px; font-weight: 500;">Transferencia</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 84.600,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10240</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">21/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Distribuidora Lomas</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Cable 2x1,5 mm por 100 m</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">4</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E9EFF6; color: #24486B; font-size: 12.5px; font-weight: 500;">Tarjeta</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 128.400,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10239</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">21/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; color: #8A8D83; border-bottom: 1px solid #EFEDE6;">Sin cliente</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Cinta aisladora negra</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">40</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #F7EFDD; color: #7A5310; font-size: 12.5px; font-weight: 500;">Efectivo</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 22.940,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10238</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">20/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Kiosco El Trébol</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Pilas AA pack x 4</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">25</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #F7EFDD; color: #7A5310; font-size: 12.5px; font-weight: 500;">Efectivo</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 96.500,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10237</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">19/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Corralón Belgrano</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Cemento bolsa 50 kg</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">60</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E8F1ED; color: #14624B; font-size: 12.5px; font-weight: 500;">Transferencia</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 402.000,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10236</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">19/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Taller Rivadavia</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Aceite 20W50 x 4 L</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">18</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E9EFF6; color: #24486B; font-size: 12.5px; font-weight: 500;">Tarjeta</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 202.180,25</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F; border-bottom: 1px solid #EFEDE6;">V-10235</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">18/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Panadería Don Nino</td>
+            <td style="padding: 12px; font-size: 14.5px; border-bottom: 1px solid #EFEDE6;">Harina 000 bolsa 25 kg</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">14</td>
+            <td style="padding: 12px; border-bottom: 1px solid #EFEDE6;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E8F1ED; color: #14624B; font-size: 12.5px; font-weight: 500;">Transferencia</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums; border-bottom: 1px solid #EFEDE6;">$ 187.420,00</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 12px 12px 0; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #55584F;">V-10234</td>
+            <td style="padding: 12px; font-size: 14.5px;">17/09/2026</td>
+            <td style="padding: 12px; font-size: 14.5px;">Ferretería San Martín</td>
+            <td style="padding: 12px; font-size: 14.5px;">Amoladora angular 4 1/2</td>
+            <td style="padding: 12px; text-align: right; font-size: 14.5px; font-variant-numeric: tabular-nums;">3</td>
+            <td style="padding: 12px;"><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #E9EFF6; color: #24486B; font-size: 12.5px; font-weight: 500;">Tarjeta</span></td>
+            <td style="padding: 12px 0 12px 12px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 14px; font-variant-numeric: tabular-nums;">$ 321.900,00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="padding-top: 16px; border-top: 1px solid #E2DFD6; margin-top: 4px; display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-size: 13px; color: #6A6D64;">Mostrando 1 — 8 de 1.482 ventas</span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button type="button" aria-label="Página anterior" disabled="disabled" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #E2DFD6; border-radius: 6px; background: #F6F4EF; cursor: not-allowed;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A6A89E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+          </button>
+          <button type="button" aria-current="page" style="min-width: 44px; height: 44px; padding: 0 12px; border: 1px solid #14624B; border-radius: 6px; background: #14624B; color: #FFFFFF; font-size: 14.5px; font-weight: 600; cursor: pointer;">1</button>
+          <button type="button" style="min-width: 44px; height: 44px; padding: 0 12px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 14.5px; cursor: pointer;">2</button>
+          <button type="button" style="min-width: 44px; height: 44px; padding: 0 12px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 14.5px; cursor: pointer;">3</button>
+          <span style="padding: 0 4px; font-size: 14.5px; color: #8A8D83;">…</span>
+          <button type="button" style="min-width: 44px; height: 44px; padding: 0 12px; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; color: #3B3E38; font-size: 14.5px; cursor: pointer;">75</button>
+          <button type="button" aria-label="Página siguiente" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #CFCBBF; border-radius: 6px; background: #FFFFFF; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B3E38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>

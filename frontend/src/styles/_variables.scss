@@ -1,0 +1,75 @@
+$color-fondo: #f6f4ef;
+$color-superficie: #ffffff;
+$color-superficie-sutil: #fbfaf6;
+
+$color-texto: #1a1c19;
+$color-texto-label: #3b3e38;
+$color-texto-secundario: #55584f;
+$color-texto-terciario: #6a6d64;
+$color-texto-apagado: #8a8d83;
+
+$color-borde-card: #e2dfd6;
+$color-borde-fila: #efede6;
+$color-borde-input: #cfcbbf;
+
+$color-acento: #14624b;
+$color-acento-hover: #0e4636;
+
+$color-exito-texto: #14624b;
+$color-exito-pill: #e8f1ed;
+$color-exito-tile: #eff6f2;
+$color-exito-borde: #cfe0d8;
+
+$color-info-texto: #24486b;
+$color-info-pill: #e9eff6;
+$color-info-tile: #f0f4f9;
+$color-info-borde: #d3dfec;
+
+$color-efectivo-texto: #7a5310;
+$color-efectivo-pill: #f7efdd;
+
+$color-error-texto: #8e2c1f;
+$color-error-titulo: #7a251a;
+$color-error-banner: #fbeae6;
+$color-error-tile: #fcf1ee;
+$color-error-borde: #e8bdb3;
+$color-error-borde-input: #b94a39;
+$color-error-borde-boton: #c99c90;
+$color-error-borde-fila: #f0d8d1;
+
+$color-icono-apagado: #a6a89e;
+$color-icono-deshabilitado: #b4b6ac;
+$color-riel-progreso: #e9e6dd;
+
+$sombra-header: 0 1px 2px rgba(16, 20, 16, 0.06), 0 8px 18px rgba(16, 20, 16, 0.07);
+
+$overlay-modal: rgba(23, 26, 23, 0.46);
+$sombra-modal: 0 24px 64px rgba(16, 20, 16, 0.32);
+$sombra-panel: 0 18px 44px rgba(16, 20, 16, 0.12);
+
+$fuente-display: 'Newsreader', Georgia, serif;
+$fuente-base: 'Instrument Sans', system-ui, 'Segoe UI', sans-serif;
+$fuente-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+$espaciado-2xs: 6px;
+$espaciado-xs: 8px;
+$espaciado-sm: 10px;
+$espaciado-md: 12px;
+$espaciado-lg: 16px;
+$espaciado-xl: 20px;
+$espaciado-2xl: 24px;
+$espaciado-3xl: 40px;
+$espaciado-4xl: 56px;
+
+$radio-control: 6px;
+$radio-bloque: 8px;
+$radio-card: 10px;
+$radio-modal: 12px;
+$radio-pill: 999px;
+
+$alto-control: 44px;
+$alto-control-mobile: 48px;
+$alto-header: 64px;
+$alto-header-mobile: 56px;
+
+$breakpoint-mobile: 720px;

@@ -1,0 +1,1 @@
+export const LOTE_MAXIMO_IMPORTACION = 200;

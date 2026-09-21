@@ -1,0 +1,362 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.boton {
+  height: $alto-control;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $espaciado-xs;
+  border-radius: $radio-control;
+  font-family: $fuente-base;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  @include foco;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &--primario {
+    padding: 0 22px;
+    border: 1px solid $color-acento;
+    background: $color-acento;
+    color: $color-superficie;
+    font-weight: 600;
+
+    &:hover:not(:disabled) {
+      background: $color-acento-hover;
+      border-color: $color-acento-hover;
+    }
+  }
+
+  &--secundario {
+    padding: 0 18px;
+    border: 1px solid $color-borde-input;
+    background: $color-superficie;
+    color: $color-texto-label;
+    font-weight: 500;
+
+    &:hover:not(:disabled) {
+      background: $color-fondo;
+    }
+  }
+
+  &--acento {
+    padding: 0 20px;
+    border: 1px solid $color-acento;
+    background: $color-superficie;
+    color: $color-acento;
+    font-weight: 600;
+
+    &:hover:not(:disabled) {
+      background: $color-exito-pill;
+    }
+  }
+
+  &--error {
+    padding: 0 16px;
+    border: 1px solid $color-error-borde-boton;
+    background: $color-superficie;
+    color: $color-error-titulo;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover:not(:disabled) {
+      background: $color-error-tile;
+    }
+  }
+
+  &--compacto {
+    font-size: 14.5px;
+  }
+
+  @include mobile {
+    height: $alto-control-mobile;
+  }
+}
+
+.boton-icono {
+  width: $alto-control;
+  height: $alto-control;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-borde-input;
+  border-radius: $radio-control;
+  background: $color-superficie;
+  cursor: pointer;
+
+  @include foco;
+
+  &:hover:not(:disabled) {
+    background: $color-fondo;
+  }
+
+  &:disabled {
+    border-color: $color-borde-card;
+    background: $color-fondo;
+    cursor: not-allowed;
+  }
+
+  &--fantasma {
+    border: 0;
+    background: transparent;
+
+    &:hover:not(:disabled) {
+      background: $color-fondo;
+    }
+
+    &:disabled {
+      background: transparent;
+    }
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-2xs;
+  min-width: 0;
+
+  &--ancho {
+    grid-column: span 2;
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: $color-texto-label;
+
+    @include mobile {
+      font-size: 12.5px;
+    }
+  }
+
+  &__opcional {
+    font-weight: 400;
+    color: $color-texto-terciario;
+  }
+
+  &__control {
+    height: $alto-control;
+    padding: 0 12px;
+    border: 1px solid $color-borde-input;
+    border-radius: $radio-control;
+    background: $color-superficie;
+    font-family: $fuente-base;
+    font-size: 15px;
+    color: $color-texto;
+    width: 100%;
+
+    @include foco;
+
+    @include mobile {
+      height: 46px;
+      font-size: 16px;
+    }
+  }
+
+  &__con-prefijo {
+    display: flex;
+    align-items: center;
+    height: $alto-control;
+    border: 1px solid $color-borde-input;
+    border-radius: $radio-control;
+    background: $color-superficie;
+    overflow: hidden;
+
+    &:focus-within {
+      outline: 2px solid $color-acento;
+      outline-offset: 2px;
+    }
+
+    @include mobile {
+      height: 46px;
+    }
+  }
+
+  &__prefijo {
+    width: 38px;
+    flex-shrink: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-fondo;
+    border-right: 1px solid $color-borde-card;
+    font-size: 14px;
+    color: $color-texto-secundario;
+  }
+
+  &__control-interno {
+    flex-grow: 1;
+    height: 42px;
+    padding: 0 12px;
+    border: 0;
+    background: transparent;
+    font-family: $fuente-base;
+    font-size: 15px;
+    color: $color-texto;
+    min-width: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include mobile {
+      height: 44px;
+      font-size: 16px;
+    }
+  }
+
+  &__hint {
+    font-size: 12px;
+    color: $color-texto-terciario;
+  }
+
+  &--error {
+    .campo__control,
+    .campo__con-prefijo {
+      border: 1.5px solid $color-error-borde-input;
+    }
+  }
+
+  &__error {
+    display: flex;
+    align-items: flex-start;
+    gap: $espaciado-2xs;
+    font-size: 12.5px;
+    color: $color-error-texto;
+    line-height: 1.45;
+
+    svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: $radio-pill;
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &--transferencia {
+    background: $color-exito-pill;
+    color: $color-exito-texto;
+  }
+
+  &--tarjeta {
+    background: $color-info-pill;
+    color: $color-info-texto;
+  }
+
+  &--efectivo {
+    background: $color-efectivo-pill;
+    color: $color-efectivo-texto;
+  }
+}
+
+.card {
+  @include card;
+}
+
+.banner-error {
+  display: flex;
+  align-items: flex-start;
+  gap: $espaciado-md;
+  padding: 14px $espaciado-lg;
+  margin-bottom: $espaciado-lg;
+  border: 1px solid $color-error-borde;
+  border-radius: $radio-bloque;
+  background: $color-error-banner;
+  color: $color-error-texto;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  &__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__titulo {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: $color-error-titulo;
+  }
+
+  &__detalle {
+    font-size: 13.5px;
+    color: $color-error-titulo;
+    line-height: 1.5;
+  }
+}
+
+.estado-bloque {
+  display: flex;
+  align-items: center;
+  gap: $espaciado-md;
+  padding: $espaciado-lg 0;
+  font-size: 14.5px;
+  color: $color-texto-secundario;
+
+  &--error {
+    color: $color-error-titulo;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.skeleton {
+  display: block;
+  border-radius: $radio-control;
+  background: linear-gradient(
+    90deg,
+    $color-borde-fila 0%,
+    $color-borde-card 50%,
+    $color-borde-fila 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-brillo 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-brillo {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

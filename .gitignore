@@ -1,0 +1,13 @@
+.env
+.DS_Store
+**/.DS_Store
+node_modules
+dist
+# Capturas y logs que deja Playwright al probar la UI.
+.playwright-mcp
+
+# Artefactos de compilación incremental de TypeScript.
+*.tsbuildinfo
+
+# Enunciado del challenge: material de Colppy, no del entregable.
+caso-practico-*.pdf

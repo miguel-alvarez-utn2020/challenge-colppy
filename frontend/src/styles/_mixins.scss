@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin card {
+  background: $color-superficie;
+  border: 1px solid $color-borde-card;
+  border-radius: $radio-card;
+}
+
+@mixin overline($espaciado: 0.09em) {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: $espaciado;
+  text-transform: uppercase;
+  color: $color-texto-terciario;
+}
+
+@mixin numerico {
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin mono($tamanio: 14px) {
+  font-family: $fuente-mono;
+  font-size: $tamanio;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin foco {
+  &:focus-visible {
+    outline: 2px solid $color-acento;
+    outline-offset: 2px;
+  }
+}

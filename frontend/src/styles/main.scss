@@ -1,0 +1,42 @@
+@use 'variables' as *;
+@use 'componentes';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  font-family: $fuente-base;
+  font-size: 15px;
+  background: $color-fondo;
+  color: $color-texto;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-acento;
+
+  &:hover {
+    color: $color-acento-hover;
+  }
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body.con-modal-abierto {
+  overflow: hidden;
+}

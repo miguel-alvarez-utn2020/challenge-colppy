@@ -1,0 +1,4 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+TEST-A-0001,2026-09-21,Ferreteria San Martin,Tornillo hexagonal 1/2 x 100,12,84600.00,transferencia
+TEST-A-0002,2026-09-21,,Cinta aisladora negra,40,22940.50,efectivo
+TEST-A-0003,2026-09-20,Distribuidora Lomas,Cable 2x1 mm por 100 m,4,128400.00,tarjeta

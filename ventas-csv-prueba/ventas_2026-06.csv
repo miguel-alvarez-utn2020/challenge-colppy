@@ -1,0 +1,14 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+V-1015,2026-06-01,Comercial Andrade,Notebook Lenovo,1,620000.00,transferencia
+V-1016,2026-06-03,Lopez Hnos,Monitor 24 pulg,3,285000.00,tarjeta
+V-1017,2026-06-05,Kiosco El Sol,Golosinas surtidas,40,6000.00,efectivo
+V-1018,2026-06-07,Ferreteria Nuñez,Pintura latex,5,42500.00,transferencia
+V-1019,2026-06-09,Bar La Esquina,Cafe en grano,10,20000.00,tarjeta
+V-1020,2026-06-12,Estudio Contable RyR,Servicio mensual,1,45000.00,transferencia
+V-1021,2026-06-14,Distribuidora Sur,Aceite x12,6,34200.00,transferencia
+V-1022,2026-06-16,Panaderia Ortiz,Harina x25kg,8,24800.00,transferencia
+V-1023,2026-06-18,Optica Vision,Lentes de contacto,4,52000.00,tarjeta
+V-1024,2026-06-20,Comercial Andrade,Servicio de consultoria,1,18500.00,transferencia
+V-1025,2026-06-23,Juan Perez,Resma A4,12,11880.00,efectivo
+V-1026,2026-06-25,Kiosco El Sol,Bebidas x24,20,48000.00,efectivo
+V-1027,2026-06-28,Comercial Andrade,Toner HP,2,16200.00,transferencia

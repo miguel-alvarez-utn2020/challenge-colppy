@@ -1,0 +1,6 @@
+id_venta,fecha,cliente,producto,cantidad,importe,medio_pago
+TEST-A-0001,2026-09-21,Ferreteria San Martin,Tornillo hexagonal 1/2 x 100,12,84600.00,transferencia
+TEST-A-0002,2026-09-21,,Cinta aisladora negra,40,22940.50,efectivo
+TEST-B-0001,2026-09-21,Kiosco El Trebol,Pilas AA pack x 4,25,96500.00,efectivo
+TEST-MALA-1,2026-09-21,Cliente Prueba,Amoladora angular,-2,10.005,mercadopago
+TEST-MALA-2,,Cliente Prueba,,0,0,efectivo
