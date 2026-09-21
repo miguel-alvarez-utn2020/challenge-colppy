@@ -39,7 +39,7 @@ y acá la precisión no es negociable.
 
 **`medio_pago` como `VARCHAR` con `CHECK`, no como `ENUM` de Postgres.**
 Un `ENUM` nativo ocupa menos (4 bytes fijos contra el largo del texto) y
-valida contra un catálogo del sistema. Elegimos el `CHECK` porque el
+valida contra un catálogo del sistema. Elegí el `CHECK` porque el
 cambio queda contenido en la tabla: agregar un medio de pago es un
 `ALTER TABLE` sobre `ventas`, mientras que tocar un `ENUM` modifica un
 tipo que puede estar compartido con otras tablas. Ninguna de las dos es
@@ -65,7 +65,7 @@ script de migración, una carga manual, un bug— y la integridad del dato
 no debería depender de que nadie se equivoque nunca.
 
 **Un solo índice, sobre `fecha`.** Es la única columna por la que hoy se
-filtra y se agrupa. No agregamos índices por las dudas: cada índice se
+filtra y se agrupa. No agregué índices por las dudas: cada índice se
 paga en cada escritura.
 
 ## Idempotencia

@@ -11,3 +11,6 @@ dist
 
 # Enunciado del challenge: material de Colppy, no del entregable.
 caso-practico-*.pdf
+
+# Machete personal de repaso, no forma parte de la entrega.
+REPASO.md

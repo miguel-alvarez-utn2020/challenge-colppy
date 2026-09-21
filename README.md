@@ -11,6 +11,8 @@ abajo](docs/capturas/01-pantalla-principal.png)
 |---|---|
 | ![Modal de nueva venta, con los campos de la venta y la validación por campo](docs/capturas/02-modal-nueva-venta.png) | ![Modal de importación, que anuncia los lotes de 200 filas y la clave de idempotencia](docs/capturas/03-modal-importar.png) |
 
+A 390 px el desglose y el detalle dejan de ser tablas: una fila por día,
+una tarjeta por venta.
 
 <img src="docs/capturas/04-mobile-390.png" width="320"
   alt="La misma pantalla a 390 px de ancho, con el desglose como lista y
@@ -55,8 +57,8 @@ la parte más delicada del pedido. **PostgreSQL** porque `ON CONFLICT` y
 `NUMERIC` resuelven en la base la deduplicación y la exactitud de la
 plata, sin que la app tenga que ocuparse. **Redis** porque la
 idempotencia por lote necesita un `SET NX` atómico con vencimiento, que
-es su caso de uso de manual. **React** porque es una tecnologia que vengo trabajando hace un tiempo.
-
+es su caso de uso de manual. **React** porque es la tecnología con la que
+vengo trabajando hace tiempo.
 
 ## Endpoints
 
@@ -176,7 +178,7 @@ El detalle completo, con los riesgos del frontend, está en
 **Backend**
 
 - **Autenticación.** No hay pantalla de login en el alcance. En un back
-  office real esto iría detrás de JWT. No lo simulamos con una API key
+  office real esto iría detrás de JWT. No lo simulé con una API key
   fija: hubiera sido seguridad de juguete.
 - **Tests end-to-end sobre HTTP.** La cobertura llega hasta el service y
   los guards, que es donde vive la lógica que se rompe en silencio. El
